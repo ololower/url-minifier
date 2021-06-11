@@ -1,8 +1,8 @@
 @extends('template')
 
 @section('content')
-    <header class="flex flex-wrap justify-between px-4 py-2 items-center">
-        <h1 class="text-2xl tracking-widest font-bold lowercase">{{ $original_href }}</h1>
+    <header class="flex justify-between px-4 py-2 items-center">
+        <h1 class="text-2xl tracking-wide lowercase">{{ $original_href }}</h1>
         @if($visits_count)
         <div class="text-center">
             <div class="text-xs font-bold text-gray-500 uppercase">Переходов</div>
