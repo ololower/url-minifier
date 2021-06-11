@@ -28,7 +28,7 @@ class LinkController extends Controller
         $linkUrl = Str::of($request->input('link'));
         if ($linkUrl->startsWith(env('APP_URL'))) {
             $code = $linkUrl->replace(env('APP_URL') . '/', '');
-            if ($code) {
+            if (strlen($code) == Link::LINK_LENGTH) {
                 $returnUrl = route('statistics', [
                     'code' => $code
                 ]);
